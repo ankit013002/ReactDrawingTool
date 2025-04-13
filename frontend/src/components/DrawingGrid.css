@@ -1,5 +1,5 @@
 .drawing-grid-container {
-    background: blue;
+    background: transparent;
     height: 100%;
     display: flex;
     flex-direction: column;

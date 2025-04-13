@@ -22,7 +22,7 @@ const DrawingGrid = (props) => {
         style={{
           width: `80%`,
           height: `80%`,
-          background: "red",
+          background: "transparent",
           display: "grid",
           columnGap: "0",
           rowGap: "0",
@@ -34,8 +34,11 @@ const DrawingGrid = (props) => {
           .fill(0)
           .map((x, index) => (
             <Tile
+              setRecentColors={props.setRecentColors}
               key={index}
+              gridLines={props.gridLines}
               newColor={props.color}
+              recentColors={props.recentColors}
               clearGrid={props.clearGrid}
             />
           ))}

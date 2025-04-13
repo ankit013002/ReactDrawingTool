@@ -9,6 +9,8 @@ const Mainpage = () => {
   const [isPaint, setIsPaint] = useState(false);
   const [clearGrid, setClearGrid] = useState(0);
   const [color, setColor] = useState("#000000");
+  const [gridLines, setGridLines] = useState(true);
+  const [recentColors, setRecentColors] = useState(["#ff0000", "#ff00ff"]);
 
   return (
     <div className="mainpage-container">
@@ -19,8 +21,10 @@ const Mainpage = () => {
         setHeight={setHeight}
         setIsPaint={setIsPaint}
         setClearGrid={setClearGrid}
+        setGridLines={setGridLines}
         color={color}
         setColor={setColor}
+        recentColors={recentColors}
       />
       <DrawingGrid
         width={width}
@@ -28,6 +32,9 @@ const Mainpage = () => {
         isPaint={isPaint}
         clearGrid={clearGrid}
         color={color}
+        gridLines={gridLines}
+        recentColors={recentColors}
+        setRecentColors={setRecentColors}
       />
     </div>
   );

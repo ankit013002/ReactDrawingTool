@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SelectionTools.css";
 
 const SelectionTools = (props) => {
+  const [colorInUse, setColorInUse] = useState("");
+
   return (
     <div className="selection-tools-container">
       <div className="selection-slider-container">
@@ -36,6 +38,18 @@ const SelectionTools = (props) => {
           </div>
         </div>
       </div>
+      <div className="selection-color-array">
+        {props.recentColors.map((item, index) => (
+          <div
+            key={index}
+            style={{ background: item, height: "60%", width: "20%" }}
+            onClick={() => {
+              setColorInUse(item);
+              props.setColor(item);
+            }}
+          ></div>
+        ))}
+      </div>
       <div className="selection-buttons-container">
         <button
           onClick={() =>
@@ -43,25 +57,46 @@ const SelectionTools = (props) => {
               return prevClearGrid + 1;
             })
           }
-          className="clear-grid-button"
+          className="selection-button"
         >
           Clear Grid
+        </button>
+        <button
+          onClick={() =>
+            props.setGridLines((prevGridLines) => {
+              return !prevGridLines;
+            })
+          }
+          className="selection-button"
+        >
+          Grid Lines
         </button>
         <div className="color-selection-container">
           <div
             style={{
               backgroundColor: props.color,
-              width: "50%",
+              width: "20%",
             }}
           ></div>
           <input
-            style={{ width: "50%" }}
-            onChange={(e) => props.setColor(e.target.value)}
+            style={{ width: "80%" }}
+            onChange={(e) => {
+              if (e.target.value.length == 6) {
+                props.setColor("#" + e.target.value);
+                setColorInUse("#" + e.target.value);
+              }
+            }}
           />
         </div>
         <button
+          onClick={() => props.setColor(colorInUse)}
+          className="selection-button"
+        >
+          Paint
+        </button>
+        <button
           onClick={() => props.setColor("#ffffff")}
-          className="erase-button"
+          className="selection-button"
         >
           Erase
         </button>
