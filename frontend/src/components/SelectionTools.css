@@ -41,9 +41,6 @@
     display: flex;
 }
 
-.selection-slider-height {
-    
-}
 
 .selection-text-height-container {
     display: flex;
@@ -60,11 +57,6 @@
     padding: 0.25em 0;
 }
 
-.create-grid-button{
-    width: 50%;
-    margin: 0 1em;
-}
-
 .clear-grid-button {
     width: 50%;
     margin: 0 1em;
@@ -75,10 +67,6 @@
     margin: 0 1em;
 }
 
-.paint-button {
-    width: 50%;
-    margin: 0 1em;
-}
 
 .color-selection-container{
     display: flex;

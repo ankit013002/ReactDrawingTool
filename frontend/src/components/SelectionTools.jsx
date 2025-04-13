@@ -38,13 +38,11 @@ const SelectionTools = (props) => {
       </div>
       <div className="selection-buttons-container">
         <button
-          onClick={() => props.setGridCreation("create")}
-          className="create-grid-button"
-        >
-          Create Grid
-        </button>
-        <button
-          onClick={() => props.setGridCreation("clear")}
+          onClick={() =>
+            props.setClearGrid((prevClearGrid) => {
+              return prevClearGrid + 1;
+            })
+          }
           className="clear-grid-button"
         >
           Clear Grid
@@ -62,13 +60,10 @@ const SelectionTools = (props) => {
           />
         </div>
         <button
-          onClick={() => props.setIsPaint(false)}
+          onClick={() => props.setColor("#ffffff")}
           className="erase-button"
         >
           Erase
-        </button>
-        <button onClick={() => props.setIsPaint(true)} className="paint-button">
-          Paint
         </button>
       </div>
     </div>

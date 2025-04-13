@@ -11,13 +11,13 @@ const DrawingGrid = (props) => {
 
   return (
     <div className="drawing-grid-container">
-      <ul className="list">
+      {/* <ul className="list">
         <li className="list-item">{props.width}</li>
         <li className="list-item">{props.height}</li>
         <li className="list-item">{props.isPaint.toString()}</li>
-        <li className="list-item">{props.gridCreation}</li>
+        <li className="list-item">{props.clearGrid}</li>
         <li className="list-item">{props.color}</li>
-      </ul>
+      </ul> */}
       <div
         style={{
           width: `80%`,
@@ -36,7 +36,7 @@ const DrawingGrid = (props) => {
             <Tile
               key={index}
               newColor={props.color}
-              gridStatus={props.gridCreation}
+              clearGrid={props.clearGrid}
             />
           ))}
       </div>

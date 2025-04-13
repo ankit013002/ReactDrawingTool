@@ -4,10 +4,10 @@ const Tile = (props) => {
   const [color, setColor] = useState("#ffffff");
 
   useEffect(() => {
-    if (props.gridStatus == "clear") {
+    if (props.clearGrid) {
       setColor("#ffffff");
     }
-  }, [props.gridStatus]);
+  }, [props.clearGrid]);
 
   return (
     <div

@@ -4,10 +4,10 @@ import SelectionTools from "../components/SelectionTools";
 import DrawingGrid from "../components/DrawingGrid";
 
 const Mainpage = () => {
-  const [width, setWidth] = useState(0);
-  const [height, setHeight] = useState(0);
+  const [width, setWidth] = useState(1);
+  const [height, setHeight] = useState(1);
   const [isPaint, setIsPaint] = useState(false);
-  const [gridCreation, setGridCreation] = useState("");
+  const [clearGrid, setClearGrid] = useState(0);
   const [color, setColor] = useState("#000000");
 
   return (
@@ -18,7 +18,7 @@ const Mainpage = () => {
         setWidth={setWidth}
         setHeight={setHeight}
         setIsPaint={setIsPaint}
-        setGridCreation={setGridCreation}
+        setClearGrid={setClearGrid}
         color={color}
         setColor={setColor}
       />
@@ -26,7 +26,7 @@ const Mainpage = () => {
         width={width}
         height={height}
         isPaint={isPaint}
-        gridCreation={gridCreation}
+        clearGrid={clearGrid}
         color={color}
       />
     </div>
