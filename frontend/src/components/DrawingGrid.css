@@ -1,0 +1,22 @@
+.drawing-grid-container {
+    background: blue;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.list {
+    background-color: green;
+    height: fit-content;
+}
+
+.list-item{
+    height: 1em;
+}
+
+.grid-container{
+    background-color: white;
+}
+

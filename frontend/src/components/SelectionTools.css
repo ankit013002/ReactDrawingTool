@@ -1,0 +1,86 @@
+.selection-tools-container {
+    background-color: transparent;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+.selection-slider-container{
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.selection-width-container{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+.selection-slider-width-container{
+    display: flex;
+}
+
+.selection-slider-width{
+}
+
+.selection-text-width-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selection-height-container {
+    display: flex;
+    width: 20%;
+    flex-direction: column;
+}
+
+.selection-slider-height-container {
+    display: flex;
+}
+
+.selection-slider-height {
+    
+}
+
+.selection-text-height-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.selection-buttons-container {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.25em 0;
+}
+
+.create-grid-button{
+    width: 50%;
+    margin: 0 1em;
+}
+
+.clear-grid-button {
+    width: 50%;
+    margin: 0 1em;
+}
+
+.erase-button {
+    width: 50%;
+    margin: 0 1em;
+}
+
+.paint-button {
+    width: 50%;
+    margin: 0 1em;
+}
+
+.color-selection-container{
+    display: flex;
+    padding: 0 1em;
+}
